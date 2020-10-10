@@ -31,7 +31,14 @@ namespace DriverProject
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                FrmCenter.GoBack();
+            }
+            catch
+            {
+                this.Close();
+            }
         }
     }
 }

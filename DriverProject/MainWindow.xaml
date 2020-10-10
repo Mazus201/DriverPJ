@@ -12,7 +12,7 @@
         <Button HorizontalAlignment="Left" VerticalAlignment="Bottom" 
                 Width="25" Height="25"
                 Content="x" Name="BtnBack"
-                Click="BtnBack_Click">
+                Click="BtnBack_Click" Style="{StaticResource BtnBack}">
         </Button>
     </Grid>
 </Window>

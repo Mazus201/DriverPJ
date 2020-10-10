@@ -35,7 +35,7 @@
                     </StackPanel>
                 </StackPanel>
                     <Button Width="250" Height="40"
-                            FontSize="20pt" Style="{StaticResource BtnStnd}/>
+                            FontSize="20pt" Style="{StaticResource BtnStnd}"/>
             </StackPanel>
         </Border>
     </Grid>
