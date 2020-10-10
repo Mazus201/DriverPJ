@@ -56,6 +56,30 @@ namespace DriverProject {
         #line default
         #line hidden
         
+        
+        #line 20 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button BtnMinimize;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 36 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button BtnMaximize;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 52 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button BtnClose;
+        
+        #line default
+        #line hidden
+        
         private bool _contentLoaded;
         
         /// <summary>
@@ -94,6 +118,33 @@ namespace DriverProject {
             
             #line 15 "..\..\MainWindow.xaml"
             this.BtnBack.Click += new System.Windows.RoutedEventHandler(this.BtnBack_Click);
+            
+            #line default
+            #line hidden
+            return;
+            case 3:
+            this.BtnMinimize = ((System.Windows.Controls.Button)(target));
+            
+            #line 20 "..\..\MainWindow.xaml"
+            this.BtnMinimize.Click += new System.Windows.RoutedEventHandler(this.BtnMinimize_Click);
+            
+            #line default
+            #line hidden
+            return;
+            case 4:
+            this.BtnMaximize = ((System.Windows.Controls.Button)(target));
+            
+            #line 36 "..\..\MainWindow.xaml"
+            this.BtnMaximize.Click += new System.Windows.RoutedEventHandler(this.BtnMaximize_Click);
+            
+            #line default
+            #line hidden
+            return;
+            case 5:
+            this.BtnClose = ((System.Windows.Controls.Button)(target));
+            
+            #line 52 "..\..\MainWindow.xaml"
+            this.BtnClose.Click += new System.Windows.RoutedEventHandler(this.BtnCLose_Click);
             
             #line default
             #line hidden
