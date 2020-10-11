@@ -1,5 +1,6 @@
 ﻿using DriverProject.AppData;
 using DriverProject.Pages;
+using DriverProject.Resourse;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,9 +23,14 @@ namespace DriverProject
     /// </summary>
     public partial class MainWindow : Window
     {
+        public bool SizeWindow { get; private set; }
+
         public MainWindow()
         {
             InitializeComponent();
+
+            ClsFrame.Ent = new DriverDBEntities();
+
             ClsFrame.FrmBody = FrmCenter;
             FrmCenter.Navigate(new Auth());
         }
@@ -38,6 +44,61 @@ namespace DriverProject
             catch
             {
                 this.Close();
+            }
+        }
+        /// <summary>
+        /// кнопка сварачивания окна
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        /// <summary>
+        /// кнопка закрытия окна
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnCLose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        /// <summary>
+        /// кнопка увеличения и уменьшения окна
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnMaximize_Click(object sender, RoutedEventArgs e)
+        {
+            if (SizeWindow == false) //проверяем открыто ли окно на весь экран
+            {
+                this.WindowState = WindowState.Maximized; //если нет, то увеличиваем
+                SizeWindow = true;
+            }
+            else //и наоборот
+            {
+                this.WindowState = WindowState.Normal;
+                SizeWindow = false;
+            }
+        }
+
+        /// <summary>
+        /// перетаскивание окна, держассь за фон
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Rectangle_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                this.DragMove();
+            }
+            catch
+            {
+
             }
         }
     }

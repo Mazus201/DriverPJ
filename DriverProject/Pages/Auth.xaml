@@ -9,25 +9,31 @@
       Title="Auth">
 
     <Grid>
-        <Border Height="180" Width="250" Background="#4C000000" 
+        <Border Height="220" Width="250" Background="#4C000000" 
                 Margin="50, 0, 50, 0" Grid.Column="0">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"
                         Width="200">
                 <StackPanel Margin="5">
                     <TextBlock Text="АВТОРИЗАЦИЯ" Style="{StaticResource Titel}"
                                HorizontalAlignment="Center" FontSize="16pt"/>
-                    <TextBox FontSize="16pt" Name="TxbLogin" 
+                    <TextBox FontSize="16pt" x:Name="TxbLogin" 
                              Foreground="LightGray" Width="200"
                              Text="Инспектор" GotFocus="TxbLogin_GotFocus"
                              LostFocus="TxbLogin_LostFocus" Height="32"/>
-                    <Border Height="3" Name="BdLogin" 
+                    <Border Height="3" Name="BdLogin"  Margin="0, -10, 0, 0"
+                            Visibility="Collapsed" Background="Red"/>
+                    <TextBox FontSize="16pt" Name="TxbPass" 
+                             Foreground="LightGray" Width="200"
+                             Text="Пароль" GotFocus="TxbPass_GotFocus"
+                             LostFocus="TxbPass_LostFocus" Height="32"/>
+                    <Border Height="3" Name="BdPass"  Margin="0, -10, 0, 0"
                             Visibility="Collapsed" Background="Red"/>
                 </StackPanel>
                 <StackPanel Margin="0, -10, 0, 0">
                     <Button Height="35" Margin="5, 15" 
                             IsDefault="True" Name="BtnAuth"
                             Click="BtnAuth_Click"  Content="ВОЙТИ"
-                            Foreground="White" Style="{StaticResource BtnStnd}"/>
+                            Style="{StaticResource BtnStnd}"/>
                     <TextBlock Foreground="White" Margin="0, -15, 0, 0" 
                                HorizontalAlignment="Center">
                         <Hyperlink Name="HLReg" Click="HLReg_Click" Foreground="White">

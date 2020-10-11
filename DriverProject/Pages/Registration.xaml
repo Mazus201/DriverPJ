@@ -16,26 +16,39 @@
                            Style="{StaticResource Titel}"/>
                 <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="15" Cursor="None">
                     <StackPanel Orientation="Vertical" Margin="15, 0">
-                        <TextBox/>
-                        <TextBox/>
-                        <TextBox/>
-                        <TextBox/>
-                        <TextBox/>
-                        <TextBox/>
-                        <TextBox/>
+                        <TextBox GotFocus="TxbGUID_GotFocus" LostFocus="TxbGUID_LostFocus"
+                                 Name="TxbGUID" Text="Идентификатор (GUID)"/>
+                        <TextBox GotFocus="TxbLName_GotFocus" LostFocus="TxbLName_LostFocus"
+                                 Name="TxbLName" Text="Фамилия"/>
+                        <TextBox GotFocus="TxbFName_GotFocus" LostFocus="TxbFName_LostFocus"
+                                 Name="TxbFName" Text="Имя"/>
+                        <TextBox GotFocus="TxbPatr_GotFocus" LostFocus="TxbPatr_LostFocus"
+                                 Name="TxbPatr" Text="Отчество"/>
+                        <TextBox GotFocus="TxbPassport_GotFocus" LostFocus="TxbPassport_LostFocus"
+                                 Name="TxbPassport" Text="Паспорт (серия и номер)"/>
+                        <TextBox GotFocus="TxbAdressReg_GotFocus" LostFocus="TxbAdressReg_LostFocus"
+                                 Name="TxbAdressReg" Text="Адрес регистрации"/>
+                        <TextBox GotFocus="TxbAdressLive_GotFocus" LostFocus="TxbAdressLive_LostFocus"
+                                 Name="TxbAdressLive" Text="Адрес проживания"/>
                     </StackPanel>
-                    <StackPanel Orientation="Vertical" Margin="15, 0">
-                        <TextBox/>
-                        <TextBox/>
-                        <TextBox/>
-                        <TextBox/>
-                        <TextBox/>
-                        <TextBox/>
-                        <TextBox/>
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBox GotFocus="TxbWorkPlace_GotFocus" LostFocus="TxbWorkPlace_LostFocus"
+                        Name="TxbWorkPlace" Text="Место работы"/>
+                        <TextBox GotFocus="TxbPost_GotFocus" LostFocus="TxbPost_LostFocus"
+                        Name="TxbPost" Text="Должность"/>
+                        <TextBox GotFocus="TxbMobile_GotFocus" LostFocus="TxbMobile_LostFocus"
+                         Name="TxbMobile" Text="Мобильный телефон"/>
+                        <TextBox GotFocus="TxbEmail_GotFocus" LostFocus="TxbEmail_LostFocus"
+                         Name="TxbEmail" Text="Email"/>
+                        <TextBox GotFocus="TxbPhoto_GotFocus" LostFocus="TxbPhoto_LostFocus"
+                         Name="TxbPhoto" Text="Фотография" Height="50"/>
+                        <TextBox GotFocus="TxbComment_GotFocus" LostFocus="TxbComment_LostFocus"
+                        Name="TxbComment" Text="Замечания"/>
                     </StackPanel>
                 </StackPanel>
                     <Button Width="250" Height="40"
-                            FontSize="20pt" Style="{StaticResource BtnStnd}"/>
+                            FontSize="20pt" Style="{StaticResource BtnStnd}"
+                            Content="Добавть"/>
             </StackPanel>
         </Border>
     </Grid>

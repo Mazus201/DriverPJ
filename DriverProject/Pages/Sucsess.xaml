@@ -9,12 +9,44 @@
       Title="Sucsess">
 
     <Grid>
-        <Border Height="350" Width="700" Background="#4C000000" 
-                Margin="50, 0, 50, 0" Grid.Column="0">
-            <StackPanel>
-                <TextBlock Text="Добро пожаловать!" Style="{StaticResource Titel}"
-                           HorizontalAlignment="Center"/>
-            </StackPanel>
-        </Border>
+        <ListView Name="DtGrdDriverList" Height="auto"
+                  Margin="30" Width="auto"
+                  HorizontalAlignment="Center" Grid.Column="1">
+
+            <ListView.View>
+                
+                <GridView AllowsColumnReorder="true"
+              ColumnHeaderToolTip="Employee Information">
+                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding GUID}" 
+                                    Header="GUID"/>
+                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding FirstName}" 
+                                    Header="Имя"/>
+                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding LastName}" 
+                                        Header="Фамилия"/>
+                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Patronomic}" 
+                                        Header="Отчество"/>
+                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Passport}" 
+                                        Header="Пасспорт"/>
+                    <GridViewColumn Width="120" DisplayMemberBinding="{Binding AdressReg}" 
+                                        Header="Адрес регистрации"/>
+                    <GridViewColumn Width="120" DisplayMemberBinding="{Binding AdressLive}" 
+                                        Header="Адрес проживания"/>
+                    <GridViewColumn Width="120" DisplayMemberBinding="{Binding Company}" 
+                                            Header="Место работы"/>
+                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Place}" 
+                                            Header="Должность"/>
+                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Phone}" 
+                                            Header="Телефон"/>
+                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Email}" 
+                                            Header="Электронная почта"/>
+                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Photo}" 
+                                            Header="Фото"/>
+                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Comment}" 
+                                            Header="Комментарий"/>
+                </GridView>
+
+            </ListView.View>
+
+        </ListView>
     </Grid>
 </Page>

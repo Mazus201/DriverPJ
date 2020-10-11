@@ -9,6 +9,7 @@
             <GradientStop Offset="0.5" Color="#FFE9DAC3"/>
             <GradientStop Offset="1" Color="#FFF3B85C"/>
         </LinearGradientBrush>
+        
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" x:Key="BrushRED">
             <GradientStop Offset="0" Color="#FFF3B85C"/>
             <GradientStop Offset="0.5" Color="#FFF3B0AF"/>

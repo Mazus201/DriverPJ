@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DriverProject.AppData;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace DriverProject.Pages
         public Sucsess()
         {
             InitializeComponent();
+            DtGrdDriverList.ItemsSource = ClsFrame.Ent.User.ToList();
         }
     }
 }

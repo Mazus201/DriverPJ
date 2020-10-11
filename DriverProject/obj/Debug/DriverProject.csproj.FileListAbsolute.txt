@@ -20,3 +20,12 @@ C:\Users\Никита\source\repos\DriverProject\DriverProject\obj\Debug\Pages\S
 C:\Users\Никита\source\repos\DriverProject\DriverProject\obj\Debug\Pages\Sucsess.baml
 C:\Users\Никита\source\repos\DriverProject\DriverProject\obj\Debug\Pages\Auth.g.cs
 C:\Users\Никита\source\repos\DriverProject\DriverProject\obj\Debug\Pages\Auth.baml
+C:\Users\Никита\source\repos\DriverProject\DriverProject\bin\Debug\EntityFramework.dll
+C:\Users\Никита\source\repos\DriverProject\DriverProject\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Никита\source\repos\DriverProject\DriverProject\bin\Debug\EntityFramework.xml
+C:\Users\Никита\source\repos\DriverProject\DriverProject\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Никита\source\repos\DriverProject\DriverProject\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Никита\source\repos\DriverProject\DriverProject\obj\Debug\DriverProject_Content.g.cs
+C:\Users\Никита\source\repos\DriverProject\DriverProject\obj\Debug\DriverProject.csproj.CopyComplete
+C:\Users\Никита\source\repos\DriverProject\DriverProject\obj\Debug\Pages\MessageBox1.g.cs
+C:\Users\Никита\source\repos\DriverProject\DriverProject\obj\Debug\Pages\MessageBox1.baml
