@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DriverProject.Resourse;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,34 @@ namespace DriverProject.Pages
         public Registration()
         {
             InitializeComponent();
+        }
+
+        bool CorrectData = true;
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            TxbBorder(TxbGUID, BdGUID, "Идентификатор (GUID)");
+            TxbBorder(TxbLName, BdLName, "Фамилия");
+            TxbBorder(TxbFName, BdFName, "Имя");
+            TxbBorder(TxbPatr, BdPart, "Отчество");
+            TxbBorder(TxbPassport, BdPassport, "Паспорт (серия и номер)");
+            TxbBorder(TxbAdressReg, BdAR, "Адрес регистрации");
+            TxbBorder(TxbAdressLive, BdAL, "Адрес проживания");
+            TxbBorder(TxbWorkPlace, BdWP, "Место работы");
+            TxbBorder(TxbPost, BdPost, "Должность");
+            TxbBorder(TxbMobile, BdMobile, "Мобильный телефон");
+            TxbBorder(TxbEmail, BdEmail, "Email");
+            TxbBorder(TxbPhoto, BdPhoto, "Фотография");
+            TxbBorder(TxbComment, BdComment, "Замечания");
+
+            if (TxbGUID.Text != "Идентификатор (GUID)" || TxbLName.Text != "Фамилия" || TxbFName.Text != "Имя" ||
+                TxbPatr.Text != "Отчество" || TxbPassport.Text != "Паспорт (серия и номер)" || TxbAdressReg.Text != "Адрес регистрации" ||
+                TxbAdressLive.Text != "Адрес проживания" || TxbWorkPlace.Text != "Место работы" || TxbPost.Text != "Должность" ||
+                TxbMobile.Text != "Мобильный телефон" || TxbEmail.Text != "Email" || TxbPhoto.Text != "Фотография")
+            {
+                MessageBox1 messageBox1 = new MessageBox1($"Пользователь {TxbFName.Text} добавлен! (К сожалению, нет, не хватило времени :с)");
+                messageBox1.Show();
+            }
         }
 
         private void TxbGUID_GotFocus(object sender, RoutedEventArgs e)
@@ -170,6 +199,26 @@ namespace DriverProject.Pages
                 textBox.Text = text;
                 textBox.Foreground = Brushes.LightGray;
             }
+        }
+
+        private void TxbBorder (TextBox textBox, Border border, string Text)
+        {
+            if (textBox.Text == Text)
+            {
+                border.Visibility = Visibility.Visible;
+                CorrectData = false;
+            }
+            else
+                CorrectData = true;
+        }
+        private void TxbBorderHide(Border border)
+        {
+            border.Visibility = Visibility.Hidden;
+        }
+
+        private void TxbPhoto_MouseMove(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }

@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
+using DriverProject.Properties;
 
 namespace DriverProject.Pages
 {
@@ -27,24 +29,23 @@ namespace DriverProject.Pages
         }
         int CountTry = 0;
 
-        private void HLReg_Click(object sender, RoutedEventArgs e)
-        {
-            ClsFrame.FrmBody.Navigate(new Registration());
-
-            TxbClear(TxbLogin, "Инспектор");
-            TxbClear(TxbPass, "Пароль");
-        }
-
         private void BtnAuth_Click(object sender, RoutedEventArgs e)
         {
+            
+
             if (TxbLogin.Text == "Инспектор" || TxbPass.Text == "Пароль")
             {
                 BdLogin.Visibility = Visibility.Visible;
                 BdPass.Visibility = Visibility.Visible;
                 CountTry++;
+                if (CountTry == 3)
+                {
+                    FuncError("Вы не ввели данные!");
+                    CountTry = 0;
+                }
             }
 
-            else if (TxbPass.Text == "1" && TxbLogin.Text == "1")
+            else if (TxbPass.Text == "1" && TxbLogin.Text == "1") //авторизацию через БД добавлю позже
             {
                 ClsFrame.FrmBody.Navigate(new Sucsess());
                 BdLogin.Visibility = Visibility.Hidden;
@@ -60,8 +61,10 @@ namespace DriverProject.Pages
 
                 if (CountTry == 3)
                 {
-                    FuncError("Вы заблокированы на 1 минуту!");
-
+                    Properties.Settings.Default.SaveData += 1;
+                    WinBlock block = new WinBlock();
+                    block.ShowDialog();
+                    CountTry = 0;
                 }
             }
 

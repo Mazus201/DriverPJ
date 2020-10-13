@@ -1,0 +1,28 @@
+﻿<Window x:Class="DriverProject.Pages.WinBlock"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DriverProject.Pages"
+        mc:Ignorable="d" WindowStyle="None" WindowStartupLocation="CenterScreen"
+        Title="Что-то не так!" Height="180" Width="350"
+                            MinHeight="180" MinWidth="350"
+                            MaxHeight="220" MaxWidth="450">
+    <Grid Background="{StaticResource BrushRED}" MouseDown="Grid_MouseDown">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Вася, ты не прав.  "/>
+                <TextBlock Text="Вы заблокированы!" Name="tbNum" TextAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Text="" TextAlignment="Center" Name="tbSec"/>
+                <TextBlock Text=" секунд до разблокировки."/>
+            </StackPanel>
+        </StackPanel>
+        <Button
+            Height="25" Width="160"
+            Content="Принято!" IsDefault="True"
+            VerticalAlignment="Bottom" Name="BtnOk" 
+            Click="BtnOk_Click" Style="{StaticResource BtnStnd}"/>
+    </Grid>
+</Window>

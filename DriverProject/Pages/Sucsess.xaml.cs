@@ -26,5 +26,23 @@ namespace DriverProject.Pages
             InitializeComponent();
             DtGrdDriverList.ItemsSource = ClsFrame.Ent.User.ToList();
         }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox1 messageBox1 = new MessageBox1("Изменения сохранены (к сожалению, нет)");
+            messageBox1.Show();
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            ClsFrame.FrmBody.Navigate(new Registration());
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox1 messageBox1 = new MessageBox1("Водитель удален (к сожалению, нет)");
+            messageBox1.Show();
+        }
+
     }
 }

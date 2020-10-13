@@ -34,11 +34,6 @@
                             IsDefault="True" Name="BtnAuth"
                             Click="BtnAuth_Click"  Content="ВОЙТИ"
                             Style="{StaticResource BtnStnd}"/>
-                    <TextBlock Foreground="White" Margin="0, -15, 0, 0" 
-                               HorizontalAlignment="Center">
-                        <Hyperlink Name="HLReg" Click="HLReg_Click" Foreground="White">
-                            Новый водитель</Hyperlink>
-                    </TextBlock>
                 </StackPanel>
             </StackPanel>
         </Border>

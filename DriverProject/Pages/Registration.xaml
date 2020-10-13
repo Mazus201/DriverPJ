@@ -18,37 +18,66 @@
                     <StackPanel Orientation="Vertical" Margin="15, 0">
                         <TextBox GotFocus="TxbGUID_GotFocus" LostFocus="TxbGUID_LostFocus"
                                  Name="TxbGUID" Text="Идентификатор (GUID)"/>
+                        <Border Height="3" Name="BdGUID"  Margin="0, -10, 0, 0"
+                            Visibility="Collapsed" Background="Red"/>
                         <TextBox GotFocus="TxbLName_GotFocus" LostFocus="TxbLName_LostFocus"
                                  Name="TxbLName" Text="Фамилия"/>
+                        <Border Height="3" Name="BdLName"  Margin="0, -10, 0, 0"
+                            Visibility="Collapsed" Background="Red"/>
                         <TextBox GotFocus="TxbFName_GotFocus" LostFocus="TxbFName_LostFocus"
                                  Name="TxbFName" Text="Имя"/>
+                        <Border Height="3" Name="BdFName"  Margin="0, -10, 0, 0"
+                            Visibility="Collapsed" Background="Red"/>
                         <TextBox GotFocus="TxbPatr_GotFocus" LostFocus="TxbPatr_LostFocus"
                                  Name="TxbPatr" Text="Отчество"/>
+                        <Border Height="3" Name="BdPart"  Margin="0, -10, 0, 0"
+                            Visibility="Collapsed" Background="Red"/>
                         <TextBox GotFocus="TxbPassport_GotFocus" LostFocus="TxbPassport_LostFocus"
                                  Name="TxbPassport" Text="Паспорт (серия и номер)"/>
+                        <Border Height="3" Name="BdPassport"  Margin="0, -10, 0, 0"
+                            Visibility="Collapsed" Background="Red"/>
                         <TextBox GotFocus="TxbAdressReg_GotFocus" LostFocus="TxbAdressReg_LostFocus"
                                  Name="TxbAdressReg" Text="Адрес регистрации"/>
+                        <Border Height="3" Name="BdAR"  Margin="0, -10, 0, 0"
+                            Visibility="Collapsed" Background="Red"/>
                         <TextBox GotFocus="TxbAdressLive_GotFocus" LostFocus="TxbAdressLive_LostFocus"
                                  Name="TxbAdressLive" Text="Адрес проживания"/>
+                        <Border Height="3" Name="BdAL"  Margin="0, -10, 0, 0"
+                            Visibility="Collapsed" Background="Red"/>
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                         <TextBox GotFocus="TxbWorkPlace_GotFocus" LostFocus="TxbWorkPlace_LostFocus"
                         Name="TxbWorkPlace" Text="Место работы"/>
+                        <Border Height="3" Name="BdWP"  Margin="0, -10, 0, 0"
+                            Visibility="Collapsed" Background="Red"/>
                         <TextBox GotFocus="TxbPost_GotFocus" LostFocus="TxbPost_LostFocus"
                         Name="TxbPost" Text="Должность"/>
+                        <Border Height="3" Name="BdPost"  Margin="0, -10, 0, 0"
+                            Visibility="Collapsed" Background="Red"/>
                         <TextBox GotFocus="TxbMobile_GotFocus" LostFocus="TxbMobile_LostFocus"
                          Name="TxbMobile" Text="Мобильный телефон"/>
+                        <Border Height="3" Name="BdMobile"  Margin="0, -10, 0, 0"
+                            Visibility="Collapsed" Background="Red"/>
                         <TextBox GotFocus="TxbEmail_GotFocus" LostFocus="TxbEmail_LostFocus"
                          Name="TxbEmail" Text="Email"/>
+                        <Border Height="3" Name="BdEmail"  Margin="0, -10, 0, 0"
+                            Visibility="Collapsed" Background="Red"/>
                         <TextBox GotFocus="TxbPhoto_GotFocus" LostFocus="TxbPhoto_LostFocus"
-                         Name="TxbPhoto" Text="Фотография" Height="50"/>
+                         Name="TxbPhoto" Text="Фотография" 
+                        Height="50" 
+                        AllowDrop="True" MouseMove="TxbPhoto_MouseMove"/>
+                        <Border Height="3" Name="BdPhoto"  Margin="0, -10, 0, 0"
+                            Visibility="Collapsed" Background="Red"/>
                         <TextBox GotFocus="TxbComment_GotFocus" LostFocus="TxbComment_LostFocus"
                         Name="TxbComment" Text="Замечания"/>
+                        <Border Height="3" Name="BdComment"  Margin="0, -10, 0, 0"
+                            Visibility="Collapsed" Background="Red"/>
                     </StackPanel>
                 </StackPanel>
                     <Button Width="250" Height="40"
                             FontSize="20pt" Style="{StaticResource BtnStnd}"
-                            Content="Добавть"/>
+                            Content="Добавть" Name="btnAdd"
+                            Click="btnAdd_Click"/>
             </StackPanel>
         </Border>
     </Grid>

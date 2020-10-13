@@ -9,44 +9,62 @@
       Title="Sucsess">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="131*"/>
+            <RowDefinition Height="19*"/>
+        </Grid.RowDefinitions>
+
         <ListView Name="DtGrdDriverList" Height="auto"
-                  Margin="30" Width="auto"
-                  HorizontalAlignment="Center" Grid.Column="1">
+                      Width="auto" Grid.Row="0" Margin="30"
+                      HorizontalAlignment="Center">
 
-            <ListView.View>
-                
-                <GridView AllowsColumnReorder="true"
-              ColumnHeaderToolTip="Employee Information">
-                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding GUID}" 
-                                    Header="GUID"/>
-                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding FirstName}" 
-                                    Header="Имя"/>
-                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding LastName}" 
-                                        Header="Фамилия"/>
-                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Patronomic}" 
-                                        Header="Отчество"/>
-                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Passport}" 
-                                        Header="Пасспорт"/>
-                    <GridViewColumn Width="120" DisplayMemberBinding="{Binding AdressReg}" 
-                                        Header="Адрес регистрации"/>
-                    <GridViewColumn Width="120" DisplayMemberBinding="{Binding AdressLive}" 
-                                        Header="Адрес проживания"/>
-                    <GridViewColumn Width="120" DisplayMemberBinding="{Binding Company}" 
-                                            Header="Место работы"/>
-                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Place}" 
-                                            Header="Должность"/>
-                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Phone}" 
-                                            Header="Телефон"/>
-                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Email}" 
-                                            Header="Электронная почта"/>
-                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Photo}" 
-                                            Header="Фото"/>
-                    <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Comment}" 
-                                            Header="Комментарий"/>
-                </GridView>
+                <ListView.View>
 
-            </ListView.View>
+                    <GridView AllowsColumnReorder="true"
+                  ColumnHeaderToolTip="Employee Information">
+                        <GridViewColumn Width="auto" DisplayMemberBinding="{Binding GUID}" 
+                                        Header="GUID"/>
+                        <GridViewColumn Width="auto" DisplayMemberBinding="{Binding FirstName}" 
+                                        Header="Имя"/>
+                        <GridViewColumn Width="auto" DisplayMemberBinding="{Binding LastName}" 
+                                            Header="Фамилия"/>
+                        <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Patronomic}" 
+                                            Header="Отчество"/>
+                        <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Passport}" 
+                                            Header="Пасспорт"/>
+                        <GridViewColumn Width="120" DisplayMemberBinding="{Binding AdressReg}" 
+                                            Header="Адрес регистрации"/>
+                        <GridViewColumn Width="120" DisplayMemberBinding="{Binding AdressLive}" 
+                                            Header="Адрес проживания"/>
+                        <GridViewColumn Width="120" DisplayMemberBinding="{Binding Company}" 
+                                                Header="Место работы"/>
+                        <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Place}" 
+                                                Header="Должность"/>
+                        <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Phone}" 
+                                                Header="Телефон"/>
+                        <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Email}" 
+                                                Header="Электронная почта"/>
+                        <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Photo}" 
+                                                Header="Фото"/>
+                        <GridViewColumn Width="auto" DisplayMemberBinding="{Binding Comment}" 
+                                                Header="Комментарий"/>
+                    </GridView>
 
-        </ListView>
+                </ListView.View>
+            </ListView>
+        <StackPanel Orientation="Horizontal" Margin="30,0,0,0" 
+                        Grid.Row="1" HorizontalAlignment="Center">
+            <Button Name="btnSave" Content="Сохранить"
+                        Width="160" Margin="10,0,0,0" Click="btnSave_Click"
+                        Style="{StaticResource BtnStnd}"/>
+                <Button Content="Добавить" Width="170"
+                        Name="btnAdd" Margin="10,0,0,0"
+                        Click="btnAdd_Click" Style="{StaticResource BtnStnd}"/>
+                <Button Content="Удалить" Width="150"
+                        Name="btnDelete" HorizontalAlignment="Right" 
+                        VerticalAlignment="Center"
+                        Margin="60,0,0,0" Click="btnDelete_Click"
+                        Style="{StaticResource BtnBack}"/>
+            </StackPanel>
     </Grid>
 </Page>

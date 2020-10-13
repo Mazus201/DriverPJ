@@ -67,6 +67,9 @@
     <Compile Include="Pages\MessageBox1.xaml.cs">
       <DependentUpon>MessageBox1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\WinBlock.xaml.cs">
+      <DependentUpon>WinBlock.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Resourse\DriverDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -117,6 +120,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Sucsess.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\WinBlock.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

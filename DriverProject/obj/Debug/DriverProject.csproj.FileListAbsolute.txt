@@ -29,3 +29,5 @@ C:\Users\Никита\source\repos\DriverProject\DriverProject\obj\Debug\DriverP
 C:\Users\Никита\source\repos\DriverProject\DriverProject\obj\Debug\DriverProject.csproj.CopyComplete
 C:\Users\Никита\source\repos\DriverProject\DriverProject\obj\Debug\Pages\MessageBox1.g.cs
 C:\Users\Никита\source\repos\DriverProject\DriverProject\obj\Debug\Pages\MessageBox1.baml
+C:\Users\Никита\source\repos\DriverProject\DriverProject\obj\Debug\Pages\WinBlock.g.cs
+C:\Users\Никита\source\repos\DriverProject\DriverProject\obj\Debug\Pages\WinBlock.baml
