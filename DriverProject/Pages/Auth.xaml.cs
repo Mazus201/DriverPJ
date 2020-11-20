@@ -1,20 +1,6 @@
 ﻿using DriverProject.AppData;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Windows.Threading;
-using DriverProject.Properties;
 
 namespace DriverProject.Pages
 {
@@ -50,7 +36,7 @@ namespace DriverProject.Pages
                 ClsFrame.FrmBody.Navigate(new Sucsess());
                 BdLogin.Visibility = Visibility.Hidden;
                 BdPass.Visibility = Visibility.Hidden;
-                CountTry = 0;
+                CountTry = 0; 
             }
 
             else
@@ -68,51 +54,28 @@ namespace DriverProject.Pages
                 }
             }
 
-            TxbClear(TxbLogin, "Инспектор");
-            TxbClear(TxbPass, "Пароль");
+            ClsFiltr.TxbClear(TxbLogin, "Инспектор");
+            ClsFiltr.TxbClear(TxbPass, "Пароль");
         }
 
         private void TxbLogin_GotFocus(object sender, RoutedEventArgs e)
         {
-            TxbGot(TxbLogin, "Инспектор");
+            ClsFiltr.TxbGot(TxbLogin, "Инспектор");
         }
 
         private void TxbLogin_LostFocus(object sender, RoutedEventArgs e)
         {
-            TxbLost(TxbLogin, "Инспектор");
+            ClsFiltr.TxbLost(TxbLogin, "Инспектор");
         }
 
         private void TxbPass_GotFocus(object sender, RoutedEventArgs e)
         {
-            TxbGot(TxbPass, "Пароль");
+            ClsFiltr.TxbGot(TxbPass, "Пароль");
         }
 
         private void TxbPass_LostFocus(object sender, RoutedEventArgs e)
         {
-            TxbLost(TxbPass, "Пароль");
-        }
-
-        private void TxbGot(TextBox textBox, string Text)
-        {
-            if (textBox.Text == Text)
-            {
-                textBox.Text = null;
-                textBox.Foreground = Brushes.Black;
-            }
-        }
-        private void TxbLost(TextBox textBox, string Text)
-        {
-            if (textBox.Text == "")
-            {
-                textBox.Text = Text;
-                textBox.Foreground = Brushes.LightGray;
-            }
-        }
-
-        private void TxbClear(TextBox textBox1, string Text)
-        {
-            textBox1.Foreground = Brushes.LightGray;
-            textBox1.Text = Text;
+            ClsFiltr.TxbLost(TxbPass, "Пароль");
         }
 
         private void FuncError(string ErrorText)
@@ -120,8 +83,8 @@ namespace DriverProject.Pages
             MessageBox1 box1 = new MessageBox1($"{ErrorText}");
             box1.ShowDialog();
 
-            TxbClear(TxbLogin, "Инспектор");
-            TxbClear(TxbPass, "Пароль");
+            ClsFiltr.TxbClear(TxbLogin, "Инспектор");
+            ClsFiltr.TxbClear(TxbPass, "Пароль");
         }
     }
 }
