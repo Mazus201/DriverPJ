@@ -7,11 +7,13 @@
         mc:Ignorable="d" WindowStyle="None" WindowStartupLocation="CenterScreen"
         Title="Что-то не так!" Height="180" Width="350"
                             MinHeight="180" MinWidth="350"
-                            MaxHeight="220" MaxWidth="450">
-    <Grid Background="{StaticResource BrushRED}" MouseDown="Grid_MouseDown">
+                            MaxHeight="220" MaxWidth="450"
+        KeyDown="OnPreviewKeyDown">
+    <Grid Background="{StaticResource BrushRED}" 
+          MouseDown="Grid_MouseDown">
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Вася, ты не прав.  "/>
+                <TextBlock Text="Вася, ты не прав."/>
                 <TextBlock Text="Вы заблокированы!" Name="tbNum" TextAlignment="Center"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0">

@@ -23,6 +23,7 @@ namespace DriverProject.Pages
         public WinBlock()
         {
             InitializeComponent();
+
             BtnOk.IsEnabled = false;
             Properties.Settings.Default.SaveTime = 60;
             DispatcherTimer dt = new DispatcherTimer();
@@ -30,6 +31,16 @@ namespace DriverProject.Pages
             dt.Tick += new EventHandler(timer_Tick);
             dt.Start();
         }
+
+        private void OnPreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.System && e.SystemKey == Key.F4)
+            {
+                e.Handled = true;
+            }
+        }
+
+
         private void timer_Tick(object sender, EventArgs e)
         {
             tbSec.Text = Properties.Settings.Default.SaveTime.ToString();

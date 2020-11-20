@@ -45,7 +45,7 @@ namespace DriverProject.Pages
                 }
             }
 
-            else if (TxbPass.Text == "1" && TxbLogin.Text == "1") //авторизацию через БД добавлю позже
+            else if (TxbPass.Text == "inspector" && TxbLogin.Text == "inspector") //авторизацию через БД добавлю позже
             {
                 ClsFrame.FrmBody.Navigate(new Sucsess());
                 BdLogin.Visibility = Visibility.Hidden;
@@ -118,7 +118,7 @@ namespace DriverProject.Pages
         private void FuncError(string ErrorText)
         {
             MessageBox1 box1 = new MessageBox1($"{ErrorText}");
-            box1.Show();
+            box1.ShowDialog();
 
             TxbClear(TxbLogin, "Инспектор");
             TxbClear(TxbPass, "Пароль");

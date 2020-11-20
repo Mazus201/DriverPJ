@@ -54,6 +54,13 @@
             </ListView>
         <StackPanel Orientation="Horizontal" Margin="30,0,0,0" 
                         Grid.Row="1" HorizontalAlignment="Center">
+            <TextBox Name="TxtFind"
+                     Width="170"
+                     Height="25"
+                     Text="Поиск"
+                     GotFocus="TxtFind_GotFocus"
+                     LostFocus="TxtFind_LostFocus"
+                     SelectionChanged="TxbFind_SelectionChanged"/>
             <Button Name="btnSave" Content="Сохранить"
                         Width="160" Margin="10,0,0,0" Click="btnSave_Click"
                         Style="{StaticResource BtnStnd}"/>
