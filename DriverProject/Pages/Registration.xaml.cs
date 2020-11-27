@@ -1,4 +1,5 @@
 ﻿using DriverProject.AppData;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -12,9 +13,9 @@ namespace DriverProject.Pages
         public Registration()
         {
             InitializeComponent();
-        }
 
-        bool CorrectData = true;
+        }
+            string regexEmail = @"(?<=[\w]{1})[\w-\._\+%\\]*(?=[\w]{1}@)|(?<=@[\w]{1})[\w-_\+%]*(?=\.)";
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
@@ -37,8 +38,19 @@ namespace DriverProject.Pages
                 TxbAdressLive.Text != "Адрес проживания" || TxbWorkPlace.Text != "Место работы" || TxbPost.Text != "Должность" ||
                 TxbMobile.Text != "Мобильный телефон" || TxbEmail.Text != "Email" || TxbPhoto.Text != "Фотография")
             {
-                MessageBox1 messageBox1 = new MessageBox1($"Пользователь {TxbFName.Text} добавлен! (К сожалению, нет, не хватило времени :с)");
-                messageBox1.Show();
+                if (!Regex.IsMatch(TxbEmail.Text, regexEmail, RegexOptions.IgnoreCase))
+                {
+                    ClsFiltr.FuncError("Вы неправлиьно ввели адрес электронной почты!");
+                }
+
+
+
+                else
+                {
+                    MessageBox1 messageBox1 = new MessageBox1($"Пользователь {TxbFName.Text} добавлен! (К сожалению, нет, не хватило времени :с)");
+                    messageBox1.Show();
+                }
+
             }
         }
 

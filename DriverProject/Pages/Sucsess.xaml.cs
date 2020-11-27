@@ -1,4 +1,5 @@
 ﻿using DriverProject.AppData;
+using DriverProject.Resourse;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -33,8 +34,23 @@ namespace DriverProject.Pages
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox1 messageBox1 = new MessageBox1("Водитель удален (к сожалению, нет)");
-            messageBox1.Show();
+            try
+            {
+                if (DtGrdDriverList.SelectedItems.Count > 0)
+                {
+                    for (int i = 0; i < DtGrdDriverList.SelectedItems.Count; i++)
+                    {
+                        User user = DtGrdDriverList.SelectedItems[i] as User;
+                        ClsFrame.Ent.User.Remove(user);
+                    }
+                    ClsFrame.Ent.SaveChanges();
+                    ClsFiltr.FuncError("Пользоваткль удален!");
+                }
+            }
+            catch
+            {
+
+            }
             ClsFiltr.TxbClear(TxtFind, "Поиск");
         }
 
@@ -52,6 +68,20 @@ namespace DriverProject.Pages
         private void TxtFind_LostFocus(object sender, RoutedEventArgs e)
         {
             ClsFiltr.TxbLost(TxtFind, "Поиск");
+        }
+
+        private void btnPrint_Click(object sender, RoutedEventArgs e)
+        {
+            PrintDialog printObj = new PrintDialog();
+
+            if (printObj.ShowDialog() == true)
+            {
+                printObj.PrintVisual(DtGrdDriverList, "");
+            }
+            else
+            {
+                ClsFiltr.FuncError("Пользователь прервал печать!");
+            }
         }
     }
 }

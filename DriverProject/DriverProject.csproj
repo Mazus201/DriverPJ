@@ -86,6 +86,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DriverDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Resourse\Police.cs">
+      <DependentUpon>DriverDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Resourse\Role.cs">
       <DependentUpon>DriverDB.tt</DependentUpon>
     </Compile>

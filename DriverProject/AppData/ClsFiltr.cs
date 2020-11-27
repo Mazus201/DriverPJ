@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DriverProject.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -45,6 +46,11 @@ namespace DriverProject.AppData
             }
             else
                 CorrectData = true;
+        }
+        public static void FuncError(string ErrorText)
+        {
+            MessageBox1 box1 = new MessageBox1($"{ErrorText}");
+            box1.ShowDialog();
         }
     }
 }

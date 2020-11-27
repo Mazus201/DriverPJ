@@ -57,20 +57,24 @@
             <TextBox Name="TxtFind"
                      Width="170"
                      Height="25"
+                     Margin="0, 1, 0, 0"
                      Text="Поиск"
                      GotFocus="TxtFind_GotFocus"
                      LostFocus="TxtFind_LostFocus"
                      SelectionChanged="TxbFind_SelectionChanged"/>
             <Button Name="btnSave" Content="Сохранить"
-                        Width="160" Margin="10,0,0,0" Click="btnSave_Click"
+                        Width="120" Margin="10,0,0,0" Click="btnSave_Click"
                         Style="{StaticResource BtnStnd}"/>
-                <Button Content="Добавить" Width="170"
+                <Button Content="Добавить" Width="120"
                         Name="btnAdd" Margin="10,0,0,0"
                         Click="btnAdd_Click" Style="{StaticResource BtnStnd}"/>
-                <Button Content="Удалить" Width="150"
+                <Button Content="Печать" Width="120"
+                        Name="btnPrint" Margin="10,0,0,0"
+                        Click="btnPrint_Click" Style="{StaticResource BtnStnd}"/>
+                <Button Content="Удалить" Width="100"
                         Name="btnDelete" HorizontalAlignment="Right" 
                         VerticalAlignment="Center"
-                        Margin="60,0,0,0" Click="btnDelete_Click"
+                        Margin="40,0,0,0" Click="btnDelete_Click"
                         Style="{StaticResource BtnBack}"/>
             </StackPanel>
     </Grid>
