@@ -1,4 +1,5 @@
 ﻿using DriverProject.AppData;
+using System;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,14 +14,17 @@ namespace DriverProject.Pages
         public Auth()
         {
             InitializeComponent();
+            
         }
         int CountTry = 0;
 
         private void BtnAuth_Click(object sender, RoutedEventArgs e)
         {
-            var user = ClsFrame.Ent.Police.FirstOrDefault(x => x.Password == TxbPass.Text && x.Login == TxbLogin.Text);
+            //Console.WriteLine($"{TxbPass.Password} {TxbLogin.Text}");
 
-            if (TxbLogin.Text == "Инспектор" || TxbPass.Text == "Пароль")
+            var user = ClsFrame.Ent.Police.FirstOrDefault(x => x.Password == TxbPass.Password && x.Login == TxbLogin.Text);
+
+            if (TxbLogin.Text == "Инспектор" /*|| TxbPass.Text == "Пароль"*/)
             {
                 BdLogin.Visibility = Visibility.Visible;
                 BdPass.Visibility = Visibility.Visible;
@@ -29,7 +33,7 @@ namespace DriverProject.Pages
                 {
                     ClsFiltr.FuncError("Вы не ввели данные!");
                     ClsFiltr.TxbClear(TxbLogin, "Инспектор");
-                    ClsFiltr.TxbClear(TxbPass, "Пароль");
+                    //ClsFiltr.TxbClear(TxbPass, "Пароль");
                     CountTry = 0;
                 }
             }
@@ -57,7 +61,8 @@ namespace DriverProject.Pages
             }
 
             ClsFiltr.TxbClear(TxbLogin, "Инспектор");
-            ClsFiltr.TxbClear(TxbPass, "Пароль");
+            TxbPass.Clear();
+            //ClsFiltr.TxbClear(TxbPass, "Пароль");
         }
 
         private void TxbLogin_GotFocus(object sender, RoutedEventArgs e)
@@ -70,15 +75,15 @@ namespace DriverProject.Pages
             ClsFiltr.TxbLost(TxbLogin, "Инспектор");
         }
 
-        private void TxbPass_GotFocus(object sender, RoutedEventArgs e)
-        {
-            ClsFiltr.TxbGot(TxbPass, "Пароль");
-        }
+        //private void TxbPass_GotFocus(object sender, RoutedEventArgs e)
+        //{
+        //    ClsFiltr.TxbGot(TxbPass, "Пароль");
+        //}
 
-        private void TxbPass_LostFocus(object sender, RoutedEventArgs e)
-        {
-            ClsFiltr.TxbLost(TxbPass, "Пароль");
-        }
-        
+        //private void TxbPass_LostFocus(object sender, RoutedEventArgs e)
+        //{
+        //    ClsFiltr.TxbLost(TxbPass, "Пароль");
+        //}
+
     }
 }
